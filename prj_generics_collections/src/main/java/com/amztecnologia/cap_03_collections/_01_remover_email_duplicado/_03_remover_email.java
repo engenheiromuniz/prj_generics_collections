@@ -1,7 +1,6 @@
-package com.amztecnologia.cap_03_collections._01_removendo_email_duplicado;
+package com.amztecnologia.cap_03_collections._01_remover_email_duplicado;
 
 import java.util.LinkedHashSet;
-import java.util.List;
 import java.util.Set;
 
 public class _03_remover_email {
