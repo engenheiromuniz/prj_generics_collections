@@ -1,9 +1,10 @@
 package com.amztecnologia.cap_03_collections._01_removendo_email_duplicado;
 
 import java.util.LinkedHashSet;
+import java.util.List;
 import java.util.Set;
 
-public class Program {
+public class _03_remover_email {
     /*
      * ** Exercício 3.1 ★ Removendo e-mails duplicados
      *
@@ -17,23 +18,19 @@ public class Program {
      * Sem normalizar: [ana@x.com, bia@x.com, ANA@x.com, carlos@x.com] (4)
      * Normalizado: [ana@x.com, bia@x.com, carlos@x.com] (3)
      */
-
     public static void main(String[] args) {
         String entrada = "ana@x.com,bia@x.com,ANA@x.com,carlos@x.com,bia@x.com";
-        String []emails = entrada.split("//,");
-
-        Set<String> semNormalizar = new LinkedHashSet<>();
-        for(String email : emails){
-            semNormalizar.add(email);
-        }
-
-        System.out.println("Sem Normalizar: "+semNormalizar);
-
+        Set<String> semNormalzar = new LinkedHashSet<>(Set.of(entrada));
         Set<String> normalizado = new LinkedHashSet<>();
-        for (String email : emails){
-            normalizado.add(email.toLowerCase());
-        }
-        System.out.println("Normalizados: "+normalizado);
+
+
+
+        System.out.println("Sem normalizar: "+semNormalzar);
+
+        for(String norma : entrada.split(","))
+            normalizado.add(norma.trim().toLowerCase());
+
+        System.out.println("Normalizado: "+normalizado);
 
     }
 }
