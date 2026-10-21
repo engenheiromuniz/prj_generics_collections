@@ -14,7 +14,7 @@ public class Exercicio_6 {
         int totalErros = 0;
 
         System.out.println("Saída esperada:");
-        
+
         for (String linha : logs) {
 
             // Divide a linha em campos
